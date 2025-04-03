@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Methods</title>
+</head>
+<body>
+
+    <h1>Javascript String Methods</h1>
+    <p>Open the Console (F12 → Console) to See the Output</p>
+
+    <script>
+        console.log("🔹🔹🔹 JavaScript String Methods 🔹🔹🔹");
+
+        let text = "Hello JavaScript!";
+        console.log("\n📌 Length of String:");
+        console.log("Length:", text.length);
+
+        console.log("\n📌 Character Extraction:");
+        console.log("charAt(6):", text.charAt(6));
+        console.log("charCodeAt(6):", text.charCodeAt(6));
+        console.log("at(-1):", text.at(-1));
+
+        console.log("\n📌 Accessing Characters using []:");
+        console.log("text[6]:", text[6]);
+
+        console.log("\n📌 Extracting Parts:");
+        console.log("slice(6,16):", text.slice(6,16));
+        console.log("substring(6,16):", text.substring(6,16));
+        console.log("substr(6,10):", text.substr(6,10));
+
+        console.log("\n📌 Changing Case:");
+        console.log("Uppercase:", text.toUpperCase());
+        console.log("Lowercase:", text.toLowerCase());
+
+        console.log("\n📌 String Concatenation:");
+        console.log("concat():", "Hello".concat(" World"));
+
+        console.log("\n📌 Trimming Strings:");
+        let trimText = "  Hello JavaScript!  ";
+        console.log("Trimmed:", trimText.trim());
+        console.log("Trim Start:", trimText.trimStart());
+        console.log("Trim End:", trimText.trimEnd());
+
+        console.log("\n📌 Padding Strings:");
+        console.log("padStart(4, '0'):", "5".padStart(4, '0'));
+        console.log("padEnd(4, '0'):", "5".padEnd(4, '0'));
+
+        console.log("\n📌 Repeating Strings:");
+        console.log("Repeat 3 times:", "Ha!".repeat(3));
+
+        console.log("\n📌 Replacing Text:");
+        let replaceText = "I love JavaScript. JavaScript is fun!";
+        console.log("Replace 'love' with 'like':", replaceText.replace("love", "like"));
+        console.log("Replace All 'JavaScript' with 'Python':", replaceText.replaceAll("JavaScript", "Python"));
+
+        console.log("\n📌 Splitting Strings:");
+        let splitText = "Apple,Banana,Cherry";
+        console.log("Split by comma:", splitText.split(","));
+
+        console.log("\n🔹🔹🔹 End of JavaScript String Methods 🔹🔹🔹");
+    </script>
+
+</body>
+</html>

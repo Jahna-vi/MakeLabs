@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Search Methods</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #64dd17, #00c853);
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            width: 60%;
+        }
+        h2 {
+            color: #fff;
+            font-weight: bold;
+        }
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            background: orange;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .result {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            text-align: left;
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Array Search Methods</h2>
+        <p><strong>Array:</strong> ["Apple", "Banana", "Cherry", "Apple", "Mango", "Cherry", "Grapes"]</p>
+
+        <div class="buttons">
+            <button onclick="indexOfCherry()">indexOf("Cherry")</button>
+            <button onclick="lastIndexOfCherry()">lastIndexOf("Cherry")</button>
+            <button onclick="includesMango()">includes("Mango")</button>
+            <button onclick="findStartsWithB()">find(x => x.startsWith("B"))</button>
+            <button onclick="findIndexStartsWithB()">findIndex(x => x.startsWith("B"))</button>
+            <button onclick="findLastGreaterThan5()">findLast(x => x.length > 5)</button>
+            <button onclick="findLastIndexGreaterThan5()">findLastIndex(x => x.length > 5)</button>
+        </div>
+
+        <div class="result" id="resultBox"></div>
+    </div>
+
+    <script>
+        let fruits = ["Apple", "Banana", "Cherry", "Apple", "Mango", "Cherry", "Grapes"];
+
+        function updateResult(text) {
+            document.getElementById("resultBox").innerHTML += `<p>${text}</p>`;
+        }
+
+        function indexOfCherry() {
+            updateResult(`indexOf('Cherry'): ${fruits.indexOf("Cherry")}`);
+        }
+
+        function lastIndexOfCherry() {
+            updateResult(`lastIndexOf('Cherry'): ${fruits.lastIndexOf("Cherry")}`);
+        }
+
+        function includesMango() {
+            updateResult(`Includes 'Mango': ${fruits.includes("Mango")}`);
+        }
+
+        function findStartsWithB() {
+            let found = fruits.find(x => x.startsWith("B"));
+            updateResult(`Find (B*): ${found}`);
+        }
+
+        function findIndexStartsWithB() {
+            let index = fruits.findIndex(x => x.startsWith("B"));
+            updateResult(`FindIndex (B*): ${index}`);
+        }
+
+        function findLastGreaterThan5() {
+            let last = fruits.findLast(x => x.length > 5);
+            updateResult(`FindLast (>5 letters): ${last}`);
+        }
+
+        function findLastIndexGreaterThan5() {
+            let lastIndex = fruits.findLastIndex(x => x.length > 5);
+            updateResult(`FindLastIndex (>5 letters): ${lastIndex}`);
+        }
+    </script>
+
+</body>
+</html>

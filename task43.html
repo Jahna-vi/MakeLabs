@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables Scope</title>
+</head>
+<body>
+
+    <h1>Javascript Variables</h1>
+
+    <script>
+        // Global Scope
+        var globalVar = "I am a global var";
+        let globalLet = "I am a global let";
+        const globalConst = "I am a global const";
+
+        console.log("Global Scope:");
+        console.log(globalVar);
+        console.log(globalLet);
+        console.log(globalConst);
+
+        function testFunctionScope() {
+            var functionVar = "I am a function-scoped var";
+            let functionLet = "I am a function-scoped let";
+            const functionConst = "I am a function-scoped const";
+
+            console.log("\nFunction Scope:");
+            console.log(functionVar);
+            console.log(functionLet);
+            console.log(functionConst);
+        }
+
+        testFunctionScope();
+
+        function testBlockScope() {
+            if (true) {
+                var blockVar = "I am a var inside a block";
+                let blockLet = "I am a let inside a block";
+                const blockConst = "I am a const inside a block";
+
+                console.log("\nInside Block:");
+                console.log(blockVar);
+                console.log(blockLet);
+                console.log(blockConst);
+            }
+            console.log("\nOutside Block (Inside Function):");
+            console.log(blockVar); // var is function-scoped
+            // console.log(blockLet); // Error: blockLet is not defined
+            // console.log(blockConst); // Error: blockConst is not defined
+        }
+
+        testBlockScope();
+    </script>
+
+</body>
+</html>

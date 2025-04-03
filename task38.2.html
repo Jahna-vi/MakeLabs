@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Asterisk Patterns</title>
+    <style>
+        body {
+            background: #000;
+            color: yellow;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin: 20px auto;
+            width: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
+        }
+        h2 {
+            text-shadow: 2px 2px 5px rgba(255, 255, 0, 0.8);
+        }
+        .pattern {
+            font-size: 20px;
+            line-height: 1.5;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Asterisk Pattern</h2>
+    <div class="container">
+        <pre class="pattern" id="trianglePattern"></pre>
+    </div>
+
+    <h2>Inverted Asterisk Pattern</h2>
+    <div class="container">
+        <pre class="pattern" id="invertedTrianglePattern"></pre>
+    </div>
+
+    <script>
+        let pattern = "";
+        for (let i = 1; i <= 5; i++) {
+            pattern += "*".repeat(i) + "\n";
+        }
+        document.getElementById("trianglePattern").innerText = pattern;
+
+        let invertedPattern = "";
+        for (let i = 5; i >= 1; i--) {
+            invertedPattern += "*".repeat(i) + "\n";
+        }
+        document.getElementById("invertedTrianglePattern").innerText = invertedPattern;
+    </script>
+
+</body>
+</html>

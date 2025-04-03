@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+</head>
+<body>
+
+    <h1>Application Form</h1>
+
+    <form>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName"><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName"><br><br>
+
+        <label for="studentId">Student ID:</label>
+        <input type="text" id="studentId" name="studentId"><br><br>
+
+        <label for="collegeName">College Name:</label>
+        <input type="text" id="collegeName" name="collegeName"><br><br>
+
+        <label for="semester">Current Semester:</label>
+        <input type="number" id="semester" name="semester" min="1" max="10"><br><br>
+
+        <label for="passingYear">Year of Passing Out:</label>
+        <input type="number" id="passingYear" name="passingYear"><br><br>
+
+        <label for="course">Course Selection:</label>
+        <select id="course" name="course">
+            <option>--Select Course--</option>
+            <option value="btech">B.Tech</option>
+            <option value="mtech">M.Tech</option>
+            <option value="bca">BCA</option>
+            <option value="mca">MCA</option>
+        </select><br><br>
+
+        <label for="stream">Stream Selection:</label>
+        <select id="stream" name="stream">
+            <option>--Select Stream--</option>
+            <option value="cse">CSE</option>
+            <option value="ece">ECE</option>
+            <option value="mech">Mechanical</option>
+            <option value="civil">Civil</option>
+        </select><br><br>
+
+        <label for="internship">Internship Course:</label>
+        <select id="internship" name="internship">
+            <option>--Select Internship Course--</option>
+            <option value="webdev">Web Development</option>
+            <option value="ml">Machine Learning</option>
+            <option value="cybersec">Cyber Security</option>
+        </select><br><br>
+
+        <label for="internshipDuration">Internship Duration (in months):</label>
+        <input type="number" id="internshipDuration" name="internshipDuration" min="1"><br><br>
+
+        <label for="registrationDate">Date of Registration:</label>
+        <input type="date" id="registrationDate" name="registrationDate"><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other<br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Methods Demo</title>
+</head>
+<body>
+
+    <h1 id="heading">Hello, Welcome!</h1>
+    <button onclick="showAlert()">Click Me</button>
+
+    <script>
+        // Using alert() method
+        alert("This is an alert message!");
+
+        // Using console.log() method
+        console.log("This message is logged to the console.");
+
+        // Modifying the DOM
+        document.getElementById("heading").innerHTML = "DOM Modified: Welcome to JavaScript!";
+
+        // Using document.write() method
+        document.write("<p>This text is written using document.write()</p>");
+        document.write("Hello, Document!");
+
+        function showAlert() {
+            alert("Button Clicked!");
+        }
+    </script>
+
+</body>
+</html>

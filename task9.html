@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: left;
+        }
+        form {
+            width: 80%;
+            margin: 20px auto;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 250px;
+        }
+        textarea {
+            width: 400px;
+            height: 50px;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Information Form</h1>
+
+    <form>
+        <div class="section-title">Personal Information</div>
+        <div class="form-group">
+            Name: <input type="text">  
+            Email: <input type="email">
+            Mobile Number: <input type="text">
+            Date of Birth: <input type="date">
+        </div>
+        <div class="form-group">
+            Community: <input type="text">
+            Nationality: <input type="text">
+            Religion: <input type="text">
+        </div>
+
+        <div class="section-title">Academic Information</div>
+        <div class="form-group">
+            Registration No: <input type="text">  
+            Admission No: <input type="text">  
+            Year of Joining: <input type="text">
+            Year of Passing Out: <input type="text">
+        </div>
+        <div class="form-group">
+            Department: <input type="text">
+            Total Number of Years: <input type="text">
+            Total Number of Semesters: <input type="text">
+        </div>
+        <div class="form-group">
+            10th Marks: <input type="text">
+            12th Marks: <input type="text">
+            TC Issued Date: <input type="date">
+        </div>
+        <div class="form-group">
+            ABC ID: <input type="text">
+            Apaar Number: <input type="text">
+            Batch: <input type="text">
+            Branch: <input type="text">
+        </div>
+
+        <div class="section-title">Family Information</div>
+        <div class="form-group">
+            Father's Name: <input type="text">
+            Mother's Name: <input type="text">
+            Mother Tongue: <input type="text">
+        </div>
+        <div class="form-group">
+            Marital Status: 
+            <select>
+                <option>Single</option>
+                <option>Married</option>
+            </select>
+            Spouse's Name (if applicable): <input type="text">
+        </div>
+
+        <div class="section-title">Other Information</div>
+        <div class="form-group">
+            Blood Group: <input type="text">
+            Address: <textarea></textarea>
+            Aadhar Card Number: <input type="text">
+        </div>
+
+        <div class="section-title">Bank Information</div>
+        <div class="form-group">
+            Bank Name: <input type="text">
+            IFSC Code: <input type="text">
+            Account Number: <input type="text">
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

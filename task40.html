@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            width: 50%;
+        }
+        h2 {
+            color: #fff;
+            font-weight: bold;
+        }
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            background: yellow;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .result {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            text-align: left;
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Array Methods</h2>
+        <p><strong>Array:</strong> ["Apple", "Banana", "Cherry"]</p>
+
+        <div class="buttons">
+            <button onclick="getLength()">Length</button>
+            <button onclick="getAt()">at(2)</button>
+            <button onclick="toStringMethod()">toString()</button>
+            <button onclick="concatArray()">Concat</button>
+            <button onclick="joinArray()">Join</button>
+            <button onclick="popMethod()">Pop</button>
+            <button onclick="pushMethod()">Push</button>
+            <button onclick="shiftMethod()">Shift</button>
+            <button onclick="unshiftMethod()">Unshift</button>
+        </div>
+
+        <div class="result" id="resultBox"></div>
+    </div>
+
+    <script>
+        let fruits = ["Apple", "Banana", "Cherry"];
+
+        function updateResult(text) {
+            document.getElementById("resultBox").innerHTML += `<p>${text}</p>`;
+        }
+
+        function getLength() {
+            updateResult(`Length: ${fruits.length}`);
+        }
+
+        function getAt() {
+            updateResult(`At Index 2: ${fruits.at(2)}`);
+        }
+
+        function toStringMethod() {
+            updateResult(`ToString: ${fruits.toString()}`);
+        }
+
+        function concatArray() {
+            let newFruits = fruits.concat(["Mango", "Grapes"]);
+            updateResult(`Concat: ${newFruits}`);
+        }
+
+        function joinArray() {
+            updateResult(`Join: ${fruits.join(" - ")}`);
+        }
+
+        function popMethod() {
+            let popped = fruits.pop();
+            updateResult(`After Pop: ${fruits}`);
+        }
+
+        function pushMethod() {
+            fruits.push("Pineapple");
+            updateResult(`After Push: ${fruits}`);
+        }
+
+        function shiftMethod() {
+            fruits.shift();
+            updateResult(`After Shift: ${fruits}`);
+        }
+
+        function unshiftMethod() {
+            fruits.unshift("Strawberry");
+            updateResult(`After Unshift: ${fruits}`);
+        }
+    </script>
+
+</body>
+</html>

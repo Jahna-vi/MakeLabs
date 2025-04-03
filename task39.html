@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Comparison</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff7e5f, #fcaf45);
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #fff;
+            font-weight: bold;
+        }
+        input {
+            width: 80%;
+            padding: 8px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+        }
+        button {
+            background: yellow;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .result {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+            text-align: left;
+            color: white;
+            font-size: 18px;
+        }
+        .icon {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>String Comparison</h2>
+        <input type="text" id="string1" placeholder="Enter first string">
+        <input type="text" id="string2" placeholder="Enter second string">
+        <br>
+        <button onclick="compareStrings()">Compare</button>
+
+        <div class="result" id="comparisonResult"></div>
+    </div>
+
+    <script>
+        function compareStrings() {
+            let str1 = document.getElementById("string1").value;
+            let str2 = document.getElementById("string2").value;
+            let resultDiv = document.getElementById("comparisonResult");
+
+            let equality = (str1 == str2) ? "✅ Equal" : "❌ Not Equal";
+            let strictEquality = (str1 === str2) ? "✅ Strictly Equal" : "❌ Not Strictly Equal";
+            let localeCompare = str1.localeCompare(str2);
+            let localeResult = localeCompare === 0 ? "✅ Strings are equal" :
+                               localeCompare < 0 ? "🔽 First string comes first" :
+                               "🔼 Second string comes first";
+            let ignoreCaseEquality = (str1.toLowerCase() === str2.toLowerCase()) ? "✅ Equal (Ignoring case)" : "❌ Not Equal (Ignoring case)";
+
+            resultDiv.innerHTML = `
+                <p>Using == : ${equality}</p>
+                <p>Using === : ${strictEquality}</p>
+                <p>Using localeCompare() : ${localeResult}</p>
+                <p>Ignoring Case : ${ignoreCaseEquality}</p>
+            `;
+        }
+    </script>
+
+</body>
+</html>

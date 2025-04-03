@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports News</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background: linear-gradient(to bottom, #ff9966, #ff5e62);
+        }
+
+        h1 {
+            color: yellow;
+            text-align: center;
+            text-shadow: 2px 4px 4px black;
+        }
+
+        div {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        p:first-child {
+            color: #ffcc00;
+        }
+
+        p:last-child {
+            color: #00ffcc;
+        }
+
+        p:nth-child(2) {
+            font-weight: bold;
+            color: #ff66ff;
+        }
+
+        div:only-child(2) {
+            border: 2px solid #996731;
+            padding: 10px;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            margin: 20px 0;
+            color: red;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: purple;
+        }
+
+        a:active {
+            color: orange;
+        }
+
+        form {
+            background: rgba(153, 61, 6, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        input:focus {
+            border: 2px solid rgb(63, 1, 1);
+            outline: none;
+        }
+
+        button {
+            background: yellow;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: orange;
+        }
+
+        button:focus-visible {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Latest in Sports</h1>
+
+    <div>
+        <p><strong>Breaking:</strong> The National Football League sees a major upset as underdogs clinch victory.</p>
+        <p><strong>Star player John Smith delivers an outstanding performance in the latest basketball finals.</strong></p>
+        <p>Fans celebrate as their favorite team secures a spot in the championship.</p>
+    </div>
+
+    <div>
+        <p class="special">"Sports bring people together, showcasing talent, passion, and determination."</p>
+        <p><strong>With the Olympics around the corner, athletes are pushing their limits for glory.</strong></p>
+    </div>
+
+    <a href="#">Read more sports news</a>
+
+    <form>
+        <label>Subscribe to our newsletter</label>
+        <input type="email" placeholder="Enter your email">
+        <input type="checkbox"> I agree to the terms and conditions
+        <button type="submit">Subscribe</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Form Example</h2>
+        <form>
+            
+            <!-- Dropdown -->
+            <label for="option">Select an Option:</label>
+            <select id="option" name="option">
+                <option value="">Choose...</option>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select>
+            <br><br>
+
+            <!-- Radio Buttons -->
+            <fieldset>
+                <legend>Gender:</legend>
+                <label>
+                    <input type="radio" name="gender" value="male"> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female"> Female
+                </label>
+            </fieldset>
+            <br><br>
+
+            <!-- Checkbox -->
+            <label>
+                <input type="checkbox" name="terms"> I agree to the terms and conditions
+            </label>
+            <br><br>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
